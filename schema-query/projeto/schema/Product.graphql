@@ -1,0 +1,8 @@
+#criando novo tipo
+    
+type Product{
+    name: String!
+    price: Float!
+    discount: Float!
+    discountPrice: Float
+}

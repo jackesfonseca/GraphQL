@@ -1,0 +1,24 @@
+#criando novo tipo
+    
+type Profile{
+    id: Int
+    name: String
+}
+
+enum userStatus{
+    ACTIVE
+    INACTIVE
+    BLOCKED
+}
+
+type User{
+    id: Int	
+	name: String
+	email: String
+	age: Int
+	salary: Float
+    vip: Boolean
+    profile_id: Int
+    profile: Profile
+    status: userStatus
+}

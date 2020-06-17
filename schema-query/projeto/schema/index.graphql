@@ -1,0 +1,10 @@
+#import User, Profile from 'User.graphql'
+#import Product from 'Product.graphql'
+#import Query from 'Query.graphql'
+
+#Ponto de entrada da API!
+#Consulta
+
+#criando scalar
+
+scalar Date
