@@ -5,6 +5,12 @@ type Profile{
     name: String
 }
 
+enum userStatus{
+    ACTIVE
+    INACTIVE
+    BLOCKED
+}
+
 type User{
     id: Int	
 	name: String
@@ -14,4 +20,5 @@ type User{
     vip: Boolean
     profile_id: Int
     profile: Profile
+    status: userStatus
 }
