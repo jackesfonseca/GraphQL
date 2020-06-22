@@ -1,0 +1,16 @@
+ApiREST e GraphQL
+
+INT:	fazer a traves dos simples chamada do http as manipulações 
+	básicas dos dados de uma aplicação.
+
+
+DES:	consultar e enviar dados 
+	inserir ou excluir registro
+	Através dos métodos http que facilitam a comunicação entre
+	cliente e sevidor (OBS: a partir da versão 1.1):
+		Get, put, post, delete
+
+	OBS: content types: especifica o tipo de retorno da aplicação
+		*json, xml, html, yaml, pdf, txt
+	OBS: quando é feito uma requisição é retornado um código
+		ex: 404 not found

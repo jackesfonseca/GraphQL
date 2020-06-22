@@ -1,19 +1,25 @@
+let id = 1
+
+function nextId(){
+    return id++
+}
+
 const users = [{
-    id: 1,
+    id: nextId(),
     name: 'Bob',
     email: 'bob@gmail.com',
     age: 30,
     profile_id: 2,
     status: 'ACTIVE'
 }, {
-    id: 2,
+    id: nextId(),
     name: 'Ana',
     email: 'ana@gmail.com',
     age: 16,
     profile_id: 1,   
     status: 'INACTIVE' 
 }, {
-    id: 3,
+    id: nextId(),
     name: 'Dean',
     email: 'dean@gmail.com',
     age: 20,
@@ -26,4 +32,8 @@ const profiles = [
     {id: 2, name: 'adm'}
 ]
 
-module.exports = { users, profiles }
+module.exports = { 
+    users, 
+    profiles, 
+    nextId 
+}

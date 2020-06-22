@@ -1,0 +1,65 @@
+GraphQL
+
+Linguagem de consulta de API. Define a forma que os dados serão retornados. 
+
+
+GraphQL vs REST
+
+Uma REST terá multiplas url(Endpoint) na API atendendo a um determinado grupo
+de dados. No GraphQL com um único endereço disponibilizado, e partir dele recebendo uma
+consulta como parâmetro conseguirá receber apenas os dados que são necessários
+
+
+Organização de dados
+
+Modelo linha coluna
+	Linhas => Entidades (Produtos)
+	Colunas => Atributos (Características)
+(BANCO DE TABELAS) Entidade Relacionamento(MER): Representa a forma abstrata do 
+banco de dados
+	Tabela mãe (Primary Key)
+	Tabela filho (Foreign Key)
+
+(BANCO RELACIONAL) Banco de documento Ex.: MongoBD (NoSQL)
+	1 - Coleção de documentos
+	2 - Cada um podento ter seu próprio atributo
+	3 - Dentro dos documentos existirá o json
+
+No GraphQL os dados serão organizados em grafos. Este, por sua vez possuem nós 
+(representa a comunicação entre os nós) e arestas
+	* Resolver => Meio utilizado para navegar entre os nós
+
+Tipos básicos em GraphQL
+	1 - Int
+	2 - Float
+ 	3 - String
+	4 - Boolean
+	5 - ID
+
+Criação de um scalar
+	* scalar 'tipo' Ex.: scalar Date
+
+Criação de um tipo
+	* type 'nome' { ... } Ex.: type User{
+					id: ID	
+					name: String
+					email: String
+					yearsOld: Int
+					salary: Float
+					vip: Boolean
+					}
+
+Mapeamento direto: nele se o nome do atributo retornado que foi definido no resolver 
+for o mesmo definido no schema da query será o passado o valor buscado. Caso contrário,
+será retornado null.
+
+OBS: importar arquivos separados para um index
+	npm i -s graphql-import: o -s salva a dependência dentro do arquivo .json
+
+	ctrl + c: sai do nodemon
+
+	npm start: inicia o nodemon
+
+	rs: atualiza o arquivo que não está sendo considerado no nodemon ex: .graphql
+	Para isso é necessário adicionar a extensão no arquivo json
+		"start": "nodemon --ext js, graphql"

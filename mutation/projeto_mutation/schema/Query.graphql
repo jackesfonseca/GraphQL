@@ -1,11 +1,6 @@
 type Query{
     #Definição da consulta ola do tipo String
-    ola: String
-    horaAtual: String
-    hora: Date
     userMaster: User
-    featuredProduct: Product
-    megaSenaNumbers: [Int!]!
     users: [User]
     user(id: Int): User
     profiles: [Profile]

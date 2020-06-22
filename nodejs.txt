@@ -1,0 +1,13 @@
+Nodejs
+
+Framework desenvolvido para rodar javascript do lado do servidor. Usando um loop
+de eventos, o Node interpreta em uma únca thread, as requisições (buscar alguma 
+informação no banco/ler arquivo no servidor) de forma assíncrona ao invés de 
+sequenciais.
+  
+Nodemon
+
+Utilitário que irá monitorar todas as mudanças na aplicação e atualizar o servidor 
+quando necessário. Autoreload
+
+apollo server

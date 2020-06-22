@@ -6,15 +6,6 @@ const {users, profiles} = require('../data/db')
 
 module.exports = {
     //função que retorna a string
-    ola(){
-        return 'Hello World'
-    },
-    horaAtual(){
-        return `${new Date()}`
-    },
-    hora(){
-        return new Date()
-    },
     userMaster(){
         return{
             id: 1,
@@ -24,19 +15,6 @@ module.exports = {
             salary_real: 1260.95,
             vip: true
         }
-    },
-
-    featuredProduct(){
-        return{
-            name: 'Stove',
-            price: 1000.00,
-            discount: 0.25
-        }
-    },
-
-    megaSenaNumbers(){
-        const crescente = (a, b) => a-b
-        return Array(6).fill(0).map(n=> parseInt(Math.random() * 60 + 1)).sort(crescente)
     },
 
     users(){
