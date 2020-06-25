@@ -1,6 +1,17 @@
 type Mutation{
     #virgula é opcional
-    newUser(name: String,
+    newUser(
+        datas: inputUser
+    ): User!
+
+    deleteUser(
+        filter: userFilter
+    ): User
+
+    changeUser(
+        id: Int,
         email: String,
-        age: Int): User!
+        name: String,
+        age: Int  
+    ): User
 }

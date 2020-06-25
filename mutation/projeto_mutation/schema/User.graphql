@@ -13,12 +13,24 @@ enum userStatus{
 
 type User{
     id: Int	
-	name: String
-	email: String
+	name: String!
+	email: String!
 	age: Int
 	salary: Float
     vip: Boolean
     profile_id: Int
     profile: Profile
     status: userStatus
+}
+
+input inputUser{
+    name: String
+    email: String
+    age: Int
+    id: Int
+}
+
+input userFilter{
+    id: Int
+    email: String
 }
