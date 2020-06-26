@@ -9,9 +9,8 @@ type Mutation{
     ): User
 
     changeUser(
-        id: Int,
-        email: String,
-        name: String,
-        age: Int  
+        datas: inputUser
+        filter: userFilter 
     ): User
 }
+

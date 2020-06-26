@@ -63,3 +63,7 @@ OBS: importar arquivos separados para um index
 	rs: atualiza o arquivo que não está sendo considerado no nodemon ex: .graphql
 	Para isso é necessário adicionar a extensão no arquivo json
 		"start": "nodemon --ext js, graphql"
+
+INPUT
+Ajuda a definir melhor aquilo que se espera receber na API. Usado Tanto em Mutation
+quanto em Query

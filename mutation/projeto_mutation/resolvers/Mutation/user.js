@@ -1,4 +1,4 @@
-const { users, nextId } = require('../data/db')
+const { users, nextId } = require('../../data/db')
 const { noSubselectionAllowedMessage } = require('graphql/validation/rules/ScalarLeafs')
 const { duplicateVariableMessage } = require('graphql/validation/rules/UniqueVariableNames')
 
@@ -9,8 +9,9 @@ function userIndex(filter){
     if(id){
         return users.findIndex(u => u.id === id)
     }else if(email){
-        return email.findIndex(u => u.email === email)
+        return users.findIndex(u => u.email === email)
     }
+    return -1
 }
 module.exports = {
      //{ name, email, age}
@@ -36,8 +37,8 @@ module.exports = {
     },
 
     //operador destructring
-    deleteUser(_, { id }){
-        const index = users.findIndex(u => u.id === id)
+    deleteUser(_, { filter }){
+        const index = userIndex(filter)
 
         if(index < null) return null
 
@@ -45,14 +46,14 @@ module.exports = {
         return excludeds ? excludeds[0] : null 
     },
 
-    changeUser(_, args){
-        const index = users.findIndex(u => u.id === args.id)
+    changeUser(_, { filter, datas }){
+        const index = userIndex(filter)
 
         if(index < null) return null
 
         const user = {
             ...users[index],//obtém todas as informações do usuário
-            ...args//os valores dos argumentos terão preferência sobre o usuário atual
+            ...datas//os valores dos argumentos terão preferência sobre o usuário atual
         }
         
         users.splice(index, 1, user)
