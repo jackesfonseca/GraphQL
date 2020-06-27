@@ -1,6 +1,4 @@
 const { users, nextId } = require('../../data/db')
-const { noSubselectionAllowedMessage } = require('graphql/validation/rules/ScalarLeafs')
-const { duplicateVariableMessage } = require('graphql/validation/rules/UniqueVariableNames')
 
 function userIndex(filter){
     if(!filter) return -1

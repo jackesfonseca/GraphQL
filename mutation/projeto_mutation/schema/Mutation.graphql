@@ -2,7 +2,7 @@ type Mutation{
     #virgula é opcional
     newUser(
         datas: inputUser
-    ): User!
+    ): User
 
     deleteUser(
         filter: userFilter
@@ -12,5 +12,18 @@ type Mutation{
         datas: inputUser
         filter: userFilter 
     ): User
+
+    newProfile(
+        datas: inputProfile
+    ): Profile
+
+    deleteProfile(
+        filter: filterProfile
+    ): Profile
+
+    changeProfile(
+        datas: inputProfile
+        filter: filterProfile
+    ): Profile
 }
 
