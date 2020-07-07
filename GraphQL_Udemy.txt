@@ -69,6 +69,11 @@ Ajuda a definir melhor aquilo que se espera receber na API. Usado Tanto em Mutat
 quanto em Query
 
 MIGRATIONS
+
+KNEX: Query Builder: Mistura o ORM (uso de models: baseado na orientação a objetos) 
+com o Raw. Auxilia na construção de código SQL sem seja necessário digitar o código 
+SQL propriamente dito
+
 Possui os ratros utilizado para desenvolver o banco de dados
 OBS.1: npm init -y : Inicia o package .json
 OBS.2: npm i -s knex mysql : Instalar o knex e mysql e o '-s' salva no package .json 
