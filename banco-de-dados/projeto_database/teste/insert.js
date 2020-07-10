@@ -21,6 +21,7 @@ const perfilSU = {
 
 db.insert(perfilSU).into('perfis')
     .then(res => res[0])
-    .then(res => console.log(res))
+    .then(id => `O valor gerado foi ${id}`)
+    .then(string => console.log(string))
     .catch(err => console.log(err.sqlMessage))
     .finally(() => db.destroy())
