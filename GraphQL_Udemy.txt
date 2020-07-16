@@ -6,8 +6,8 @@ Linguagem de consulta de API. Define a forma que os dados serão retornados.
 GraphQL vs REST
 
 Uma REST terá multiplas url(Endpoint) na API atendendo a um determinado grupo
-de dados. No GraphQL com um único endereço disponibilizado, e partir dele recebendo uma
-consulta como parâmetro conseguirá receber apenas os dados que são necessários
+de dados. No GraphQL com um único endereço disponibilizado, e partir dele recebendo 
+uma consulta como parâmetro conseguirá receber apenas os dados que são necessários
 
 
 Organização de dados

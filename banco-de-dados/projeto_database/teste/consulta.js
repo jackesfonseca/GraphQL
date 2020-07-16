@@ -1,4 +1,4 @@
-const db = require ('../config/db')//caminho relativo
+const db = require('../config/db')//caminho relativo
 
 //COMO CONSULTAR
 
